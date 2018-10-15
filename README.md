@@ -1,5 +1,7 @@
 # lastfm2vkstatus
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/95b4fb07dce64f1185bfdac8d97f30ab)](https://app.codacy.com/app/DiSonDS/lastfm2vkstatus?utm_source=github.com&utm_medium=referral&utm_content=DiSonDS/lastfm2vkstatus&utm_campaign=Badge_Grade_Dashboard)
+
 Use currently playing track as status in VK.com
 
 ## Requirements
