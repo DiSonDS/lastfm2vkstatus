@@ -8,8 +8,12 @@ from settings import *
 def main():
 
     # Lastfm init
-    network = pylast.LastFMNetwork(api_key=API_KEY, api_secret=API_SECRET,
-                                   username=USERNAME, password_hash=pylast.md5(PASSWORD))
+    network = pylast.LastFMNetwork(
+        api_key=API_KEY,
+        api_secret=API_SECRET,
+        username=USERNAME,
+        password_hash=pylast.md5(PASSWORD),
+    )
 
     lastfm = network.get_user(USERNAME)
 
@@ -17,14 +21,14 @@ def main():
     vk_session = vk_api.VkApi(token=VK_USER_TOKEN)
     vk = vk_session.get_api()
 
-    last_track = ''
+    last_track = ""
 
     while True:
         if lastfm:
             results = lastfm.get_now_playing()
             if not results:
                 if last_track:
-                    last_track = ''
+                    last_track = ""
                     vk.status.set(text="")
                 time.sleep(INTERVAL)
                 continue
