@@ -42,7 +42,7 @@ def main():
             else:
                 time.sleep(INTERVAL)
         else:
-            print(f"Can't get user")
+            print("Can't get user")
             sys.exit()
 
 
