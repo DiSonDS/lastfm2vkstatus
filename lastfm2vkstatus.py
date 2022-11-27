@@ -11,7 +11,7 @@ def main():
     network = pylast.LastFMNetwork(api_key=API_KEY, api_secret=API_SECRET,
                                    username=USERNAME, password_hash=pylast.md5(PASSWORD))
 
-    lastfm = pylast.User("", network)
+    lastfm = network.get_user(USERNAME)
 
     # VK init
     vk_session = vk_api.VkApi(token=VK_USER_TOKEN)
